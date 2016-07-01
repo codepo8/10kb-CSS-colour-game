@@ -1,0 +1,140 @@
+body,html {
+  background: DarkSlateGray;
+  color: #fff;
+  font-family: helvetica, arial, sans-serif;
+}
+h1 {
+  color: skyblue;
+  font-weight: lighter;
+}
+section {
+  display: block;
+  max-width: 600px;
+  padding: 2em;
+  background: #000;
+  margin: 0 auto;
+  position: relative;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style:none;
+  float: left;
+}
+li a {
+  line-height: 60px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 60px;
+  color: #000;
+  height: 60px;
+  border-radius: 50% 50%;
+  display: block;
+  transform: scale(0.85);
+  transition: 0.4s;
+}
+li a:hover { 
+  transform: scale(1); 
+}
+b { 
+  font-weight: normal; 
+}
+ul { 
+  margin: 100px 0 50px 0;
+  padding: 0;
+  overflow: auto;
+}
+p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+ul#levelbuttons {
+  margin: 0;
+  padding: 0;
+}
+.intro,.gameover {
+  font-weight: lighter;
+  z-index: 3;
+  background: #000;
+  max-width: 600px;
+  width: 75%;
+  padding: 2em;
+  position: absolute;
+  left: 50%;
+  top: -1000px;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+.loaded .intro,.ended .gameover {
+  top: 30px;
+}
+
+.riddle {
+  text-transform: uppercase;
+  position: fixed;
+  max-width: 580px;
+  background:rgba(0,0,0,.7);
+  pointer-events: none;
+  top: 10px;
+  padding: 10px;
+  z-index: 2; 
+}
+.loaded .riddle, .loaded .levelselect, .loaded ul,
+.ended .riddle, .ended .levelselect, .ended ul {
+  opacity: 0;
+  transition: 0.4s;
+}
+#colourname {
+  color: lime;
+}  
+#result {
+  display: block;
+  color: #ccc;
+  margin-top: 5px;
+}
+footer {
+  display: block;
+  clear: both;
+  color: #ccc;
+  text-align: right;
+  padding: 2em 0 1em 0;
+}
+span span {
+  padding: 0 .2em;
+}
+.right {
+  color: LawnGreen;
+}
+.wrong {
+  color: IndianRed;
+}
+button {
+  border: none;
+  background: olivedrab;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 2em 0;
+  clear: both;
+  display: block;
+}
+footer button {
+  background: #333;
+  margin: 0;
+  float: left;
+}
+li button {
+  background: #333;
+  margin: 0;
+}
+li button:hover, li button:focus, li button.current {
+  background: deepskyblue;
+  color: darkslategrey;
+  transition: 0.3s;
+}
