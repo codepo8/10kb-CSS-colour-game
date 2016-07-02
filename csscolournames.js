@@ -114,6 +114,12 @@
   function gameover(correct) {
     $('.scores').innerHTML = 'You recognised ' + correct + ' colours on the ' + 
                               currentlevel.innerHTML + ' level.';
+    $('.share').innerHTML = '<a target="_blank" href="http://twitter.com/share?url=' +
+                            'https://codepo8.github.io/10kb-CSS-colour-game/&text=' +
+                            encodeURIComponent('I played "Find the named CSS colour" ' +
+                            'and recognised ' + correct + ' colours on the ' + 
+                            currentlevel.innerHTML + ' level') + 
+                            '">Share on Twitter</a>';                          
     document.body.classList.add('ended');
   }
 

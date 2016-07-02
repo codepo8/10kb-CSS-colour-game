@@ -19,6 +19,21 @@ section {
 a {
   text-decoration: none;
 }
+.share {
+  text-align: right;
+}
+.share a {
+  background: #333;
+  color: #fff;
+  padding: .2em;
+  text-transform: uppercase;
+  font-size: 90%;
+  transition 400ms;
+}
+.share a:hover, .share a:focus {
+  background: deepskyblue;
+  color: darkslategrey;
+}
 li {
   list-style:none;
   float: left;
@@ -102,6 +117,9 @@ footer {
   color: #ccc;
   text-align: right;
   padding: 2em 0 1em 0;
+}
+footer a {
+  color: limegreen;
 }
 span span {
   padding: 0 .2em;
