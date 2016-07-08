@@ -14,12 +14,12 @@
         "type": "image/png",
         "sizes": "128x128"
       }, {
-        "src": "images/touch/Airhorner_256.png",
+        "src": "icons/256x256.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "images/touch/Airhorner_512.png",
+        "src": "icons/512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }],
