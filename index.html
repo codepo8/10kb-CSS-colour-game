@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Find the named CSS colour</title>
   <link rel="stylesheet" type="text/css" href="csscolournames.css">
+  <link rel="icon" href="/favicon.ico" type="image/ico" />
+  <link rel="icon apple-touch-icon" href="/logo.png" sizes="500x500" type="image/png" />
 </head>
 <body>
   <header class="intro">
@@ -35,5 +37,16 @@
     </footer>
   </section>
 <script src="csscolournames.js"></script>
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', { scope: '/' })
+    .then(function(registration) {
+      console.log('Service Worker Registered');
+    });
+  navigator.serviceWorker.ready.then(function(registration) {
+      console.log('Service Worker Ready');
+  });
+}
+</script>
 </body>
 </html>
