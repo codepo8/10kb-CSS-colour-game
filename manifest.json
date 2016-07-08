@@ -24,7 +24,7 @@
         "sizes": "512x512"
       }],
   "start_url": "/10kb-CSS-colour-game/",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "background_color": "#000000",
   "theme_color": "#000000"
