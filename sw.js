@@ -6,6 +6,10 @@ self.addEventListener('install', e => {
         '/index.html',
         '/logo.png',
         '/csscolournames.js',
+        '/icons/128x128.png',
+        '/icons/256x256.png',
+        '/icons/64x64.png',
+        '/icons/90x90.png',
         '/csscolournames.css'
       ])
       .then(() => self.skipWaiting());

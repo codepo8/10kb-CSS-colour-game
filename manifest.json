@@ -1,0 +1,31 @@
+{
+  "name": "CSS Colour Names",
+  "short_name": "Colour Names",
+  "icons": [{
+        "src": "icons/90x90.png",
+        "type": "image/png",
+        "sizes": "90x90"
+      }, {
+        "src": "icons/64x64.png",
+        "type": "image/png",
+        "sizes": "64x64"
+      }, {
+        "src": "icons/128x128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      }, {
+        "src": "images/touch/Airhorner_256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "images/touch/Airhorner_512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
