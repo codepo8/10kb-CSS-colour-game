@@ -1,5 +1,5 @@
 body,html {
-  background: DarkSlateGray;
+  background: #000;
   color: #fff;
   font-family: helvetica, arial, sans-serif;
 }
@@ -19,20 +19,16 @@ section {
 a {
   text-decoration: none;
 }
-.share {
-  text-align: right;
+a svg {
+  float: left;
+  padding-right: 4px;
 }
 .share a {
-  background: #333;
   color: #fff;
   padding: .2em;
   text-transform: uppercase;
-  font-size: 90%;
-  transition 400ms;
-}
-.share a:hover, .share a:focus {
-  background: deepskyblue;
-  color: darkslategrey;
+  line-height: 58px;
+  display: block;
 }
 li {
   list-style:none;
@@ -68,7 +64,7 @@ p {
   line-height: 1.3em;
 }
 ul#levelbuttons {
-  margin: 0;
+  margin: 1em 0 0 0;
   padding: 0;
 }
 .intro,.gameover {
@@ -98,8 +94,8 @@ ul#levelbuttons {
   padding: 10px;
   z-index: 2; 
 }
-.loaded .riddle, .loaded .levelselect, .loaded ul,
-.ended .riddle, .ended .levelselect, .ended ul {
+.loaded .riddle, .loaded .swabs,
+.ended .riddle, .ended .swabs {
   opacity: 0;
   transition: 0.4s;
 }
@@ -111,14 +107,14 @@ ul#levelbuttons {
   color: #ccc;
   margin-top: 5px;
 }
-footer {
+small {
   display: block;
   clear: both;
   color: #ccc;
   text-align: right;
   padding: 2em 0 1em 0;
 }
-footer a {
+small a {
   color: limegreen;
 }
 span span {
@@ -142,16 +138,11 @@ button {
   clear: both;
   display: block;
 }
-footer button {
-  background: #333;
-  margin: 0;
-  float: left;
-}
 li button {
   background: #333;
   margin: 0;
 }
-li button:hover, li button:focus, li button.current {
+li button:hover, li button:focus {
   background: deepskyblue;
   color: darkslategrey;
   transition: 0.3s;
