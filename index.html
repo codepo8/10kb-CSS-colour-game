@@ -55,6 +55,7 @@
   </section>
 <script src="csscolournames.js"></script>
 <script>
+/* ServiceWorker */
 if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/10kb-CSS-colour-game/sw.js', { scope: '/10kb-CSS-colour-game/' })
     .then(function(registration) {
