@@ -14,7 +14,6 @@ section {
   background: #000;
   margin: 0 auto;
   position: relative;
-  color: #fff;
 }
 a {
   text-decoration: none;
@@ -67,7 +66,6 @@ ul {
   overflow: auto;
 }
 p {
-  color: #fff;
   font-size: 20px;
   line-height: 1.3em;
 }
@@ -137,7 +135,6 @@ span span {
 button {
   border: none;
   background: olivedrab;
-  color: #fff;
   text-transform: uppercase;
   font-family: helvetica, arial, sans-serif;
   font-size: 18px;
