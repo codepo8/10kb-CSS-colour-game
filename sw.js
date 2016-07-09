@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('csscolourgame').then(cache => {
+    caches.open('csscolourgame-v2').then(cache => {
       return cache.addAll([
         '/10kb-CSS-colour-game/',
         '/10kb-CSS-colour-game/index.html',
