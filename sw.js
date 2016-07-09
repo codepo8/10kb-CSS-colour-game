@@ -2,16 +2,16 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('csscolourgame').then(cache => {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/logo.png',
-        '/csscolournames.js',
-        '/icons/128x128.png',
-        '/icons/256x256.png',
-        '/icons/512x512.png',
-        '/icons/64x64.png',
-        '/icons/90x90.png',
-        '/csscolournames.css'
+        '/10kb-CSS-colour-game/',
+        '/10kb-CSS-colour-game/index.html',
+        '/10kb-CSS-colour-game/logo.png',
+        '/10kb-CSS-colour-game/csscolournames.js',
+        '/10kb-CSS-colour-game/icons/128x128.png',
+        '/10kb-CSS-colour-game/icons/256x256.png',
+        '/10kb-CSS-colour-game/icons/512x512.png',
+        '/10kb-CSS-colour-game/icons/64x64.png',
+        '/10kb-CSS-colour-game/icons/90x90.png',
+        '/10kb-CSS-colour-game/csscolournames.css'
       ])
       .then(() => self.skipWaiting());
     })
