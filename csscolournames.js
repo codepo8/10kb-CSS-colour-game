@@ -169,6 +169,7 @@
   $('.gameover button').addEventListener('click', function(ev) {
       document.body.classList.remove('ended');
       $('#result').innerHTML = '';
+      correct = 0;
       document.body.classList.add('loaded');
   });
 

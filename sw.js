@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('csscolourgame-v3').then(cache => {
+    caches.open('csscolourgame-v4').then(cache => {
       return cache.addAll([
         '/10kb-CSS-colour-game/',
         '/10kb-CSS-colour-game/index.html',
@@ -20,7 +20,7 @@ self.addEventListener('install', e => {
  
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['csscolourgame-v3'];
+  var cacheWhitelist = ['csscolourgame-v4'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
