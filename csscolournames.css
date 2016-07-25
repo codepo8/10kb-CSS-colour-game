@@ -15,6 +15,11 @@ section {
   margin: 0 auto;
   position: relative;
 }
+li {
+  list-style:none;
+  float: left;
+}
+
 a {
   text-decoration: none;
 }
@@ -28,10 +33,6 @@ a svg {
   text-transform: uppercase;
   line-height: 58px;
   display: block;
-}
-li {
-  list-style:none;
-  float: left;
 }
 li a {
   line-height: 33px;
@@ -48,12 +49,6 @@ li a {
   width: 10vw;
   height: 10vw;
 }
-@media only screen and (min-width: 680px) {
-   li a {
-    width: 60px;
-    height: 60px;
-  }
-}
 li a:hover { 
   transform: scale(1); 
 }
@@ -69,6 +64,7 @@ p {
   font-size: 20px;
   line-height: 1.3em;
 }
+
 ul#levelbuttons {
   margin: 1em 0 0 0;
   padding: 0;
@@ -144,11 +140,18 @@ button {
   display: block;
 }
 li button {
-  background: #333;
-  margin: 0;
+  background: lightslategrey;
+  margin: 0 .2em 0 0;
+  color:white;
 }
 li button:hover, li button:focus {
   background: deepskyblue;
-  color: darkslategrey;
+  color: white;
   transition: 0.3s;
+}
+@media only screen and (min-width: 680px) {
+   li a {
+    width: 60px;
+    height: 60px;
+  }
 }
