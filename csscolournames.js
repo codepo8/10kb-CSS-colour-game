@@ -117,8 +117,7 @@
       encodeURIComponent('I played "Find the named CSS colour" ' +
       'and recognised ' + correct + ' colours on the ' + 
       currentlevel.innerHTML + ' level') + 
-      '"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="42" viewBox="0 0 182.66667 150.66667"><defs><clipPath id="a"><path d="M0 10.012h1366.9v1110.9H0z"/></clipPath></defs><g clip-path="url(#a)" transform="matrix(.1333 0 0 -.1333 0 150.67)"><path d="M1366.9 989.39c-50.27-22.31-104.33-37.387-161.05-44.18 57.89 34.723 102.34 89.68 123.28 155.15-54.18-32.15-114.18-55.47-178.09-68.04-51.13 54.49-124.02 88.55-204.68 88.55-154.89 0-280.43-125.55-280.43-280.43 0-21.988 2.457-43.398 7.258-63.91-233.08 11.68-439.72 123.36-578.04 293.01-24.14-41.4-37.97-89.567-37.97-140.97 0-97.308 49.49-183.13 124.76-233.44-45.968 1.437-89.217 14.058-127.03 35.078-.042-1.18-.042-2.348-.042-3.52 0-135.9 96.68-249.22 224.96-275-23.512-6.41-48.28-9.8-73.86-9.8-18.09 0-35.628 1.71-52.78 5 35.71-111.41 139.26-192.5 262-194.77-96.06-75.23-216.96-120.04-348.36-120.04-22.622 0-44.962 1.332-66.92 3.91 124.16-79.568 271.55-125.98 429.94-125.98 515.82 0 797.86 427.31 797.86 797.93 0 12.153-.28 24.223-.79 36.25 54.77 39.57 102.31 88.95 139.93 145.2" fill="#55ACEE"/></g></svg>' +
-      'Share on Twitter</a>';                          
+      '">' + 'Share on Twitter</a>';                          
     document.body.classList.add('ended');
   }
 
@@ -142,7 +141,6 @@
     }
     list.innerHTML = out;
   }
-
   function shuffle(array) {
     var newarray = array.slice(0);
     var currentIndex = newarray.length, temporaryValue, randomIndex ;
@@ -155,26 +153,12 @@
     }
     return newarray;
   }
-
-  /* ZOMG cheatmode */
-  document.addEventListener('keydown', function(ev) {
-    if (ev.which === 191) {
-      $('a[data-title^=' + currentcol + ']').innerHTML = '!';
-      }
-  });
-  document.addEventListener('keyup', function(ev) {
-      $('a[data-title^=' + currentcol + ']').innerHTML = '';
-  });
- /* end cheatmode */
-
   $('.gameover button').addEventListener('click', function(ev) {
       document.body.classList.remove('ended');
       $('#result').innerHTML = '';
       correct = 0;
       document.body.classList.add('loaded');
   });
-
   init(0, levels['easy'][0], levels['easy'][1]);
   document.body.classList.add('loaded');
-
 ;})();
