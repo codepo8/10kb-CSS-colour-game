@@ -23,16 +23,11 @@ li {
 a {
   text-decoration: none;
 }
-a svg {
-  float: left;
-  padding-right: 4px;
-}
 .share a {
-  color: #fff;
-  padding: .2em;
+  background: powderblue;
+  color: #000;
+  padding: 2px 5px;
   text-transform: uppercase;
-  line-height: 58px;
-  display: block;
 }
 li a {
   line-height: 33px;
@@ -85,7 +80,6 @@ ul#levelbuttons {
 .loaded .intro, .ended .gameover {
   top: 30px;
 }
-
 .riddle {
   text-transform: uppercase;
   position: fixed;
