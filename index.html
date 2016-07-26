@@ -12,10 +12,6 @@
   <meta name="application-name" content="CSS Colour Game">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="CSS Colour Game">
-  <link rel="icon" sizes="192x192" href="icons/256x256.png">
-  <link rel="apple-touch-icon" href="icons/256x256.png">
-  <meta name="msapplication-TileImage" content="icons/256x256.png">
-  <meta name="msapplication-TileColor" content="#000000">
   <meta name="theme-color" content="#000000">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="https://codepo8.github.io/10kb-CSS-colour-game/">
@@ -50,9 +46,8 @@
       <button>Try again!</button>
     </header>
   </section>
-<script src="csscolournames.js"></script>
+<script src="csscolournames.min.js"></script>
 <script>
-/* ServiceWorker */
 if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/10kb-CSS-colour-game/sw.js', { scope: '/10kb-CSS-colour-game/' })
     .then(function(registration) {

@@ -1,36 +1,7 @@
 (function(){
-  var cols = ['AliceBlue','AntiqueWhite','Aqua','Aquamarine',
-  'Azure','Beige','Bisque','Black','BlanchedAlmond','Blue',
-  'BlueViolet','Brown','BurlyWood','CadetBlue','Chartreuse',
-  'Chocolate','Coral','CornflowerBlue','Cornsilk','Crimson',
-  'Cyan','DarkBlue','DarkCyan','DarkGoldenRod','DarkGray',
-  'DarkGreen','DarkKhaki','DarkMagenta','DarkOliveGreen',
-  'DarkOrange','DarkOrchid','DarkRed','DarkSalmon','DarkSeaGreen',
-  'DarkSlateBlue','DarkSlateGray','DarkTurquoise','DarkViolet',
-  'DeepPink','DeepSkyBlue','DimGray','DodgerBlue','FireBrick',
-  'FloralWhite','ForestGreen','Fuchsia','Gainsboro','GhostWhite',
-  'Gold','GoldenRod','Gray','Green','GreenYellow','HoneyDew',
-  'HotPink','IndianRed ','Indigo  ','Ivory','Khaki','Lavender',
-  'LavenderBlush','LawnGreen','LemonChiffon','LightBlue','LightCoral',
-  'LightCyan','LightGoldenRodYellow','LightGray','LightGreen',
-  'LightPink','LightSalmon','LightSeaGreen','LightSkyBlue',
-  'LightSlateGray','LightSteelBlue','LightYellow','Lime','LimeGreen',
-  'Linen','Magenta','Maroon','MediumAquaMarine','MediumBlue',
-  'MediumOrchid','MediumPurple','MediumSeaGreen','MediumSlateBlue',
-  'MediumSpringGreen','MediumTurquoise','MediumVioletRed',
-  'MidnightBlue','MintCream','MistyRose','Moccasin','NavajoWhite',
-  'Navy','OldLace','Olive','OliveDrab','Orange','OrangeRed',
-  'Orchid','PaleGoldenRod','PaleGreen','PaleTurquoise','PaleVioletRed',
-  'PapayaWhip','PeachPuff','Peru','Pink','Plum','PowderBlue',
-  'Purple','RebeccaPurple','Red','RosyBrown','RoyalBlue',
-  'SaddleBrown','Salmon','SandyBrown','SeaGreen','SeaShell',
-  'Sienna','Silver','SkyBlue','SlateBlue','SlateGray','Snow',
-  'SpringGreen','SteelBlue','Tan','Teal','Thistle','Tomato',
-  'Turquoise','Violet','Wheat','White','WhiteSmoke','Yellow',
-  'YellowGreen'];
-  function $(x) {
-    return document.querySelector(x);
-  }
+  var cols = ['AliceBlue','AntiqueWhite','Aqua','Aquamarine','Azure','Beige','Bisque','Black','BlanchedAlmond','Blue','BlueViolet','Brown','BurlyWood','CadetBlue','Chartreuse',
+  'Chocolate','Coral','CornflowerBlue','Cornsilk','Crimson','Cyan','DarkBlue','DarkCyan','DarkGoldenRod','DarkGray','DarkGreen','DarkKhaki','DarkMagenta','DarkOliveGreen','DarkOrange','DarkOrchid','DarkRed','DarkSalmon','DarkSeaGreen','DarkSlateBlue','DarkSlateGray','DarkTurquoise','DarkViolet','DeepPink','DeepSkyBlue','DimGray','DodgerBlue','FireBrick','FloralWhite','ForestGreen','Fuchsia','Gainsboro','GhostWhite','Gold','GoldenRod','Gray','Green','GreenYellow','HoneyDew','HotPink','IndianRed ','Indigo','Ivory','Khaki','Lavender','LavenderBlush','LawnGreen','LemonChiffon','LightBlue','LightCoral','LightCyan','LightGoldenRodYellow','LightGray','LightGreen','LightPink','LightSalmon','LightSeaGreen','LightSkyBlue','LightSlateGray','LightSteelBlue','LightYellow','Lime','LimeGreen','Linen','Magenta','Maroon','MediumAquaMarine','MediumBlue','MediumOrchid','MediumPurple','MediumSeaGreen','MediumSlateBlue','MediumSpringGreen','MediumTurquoise','MediumVioletRed','MidnightBlue','MintCream','MistyRose','Moccasin','NavajoWhite','Navy','OldLace','Olive','OliveDrab','Orange','OrangeRed','Orchid','PaleGoldenRod','PaleGreen','PaleTurquoise','PaleVioletRed','PapayaWhip','PeachPuff','Peru','Pink','Plum','PowderBlue','Purple','RebeccaPurple','Red','RosyBrown','RoyalBlue','SaddleBrown','Salmon','SandyBrown','SeaGreen','SeaShell','Sienna','Silver','SkyBlue','SlateBlue','SlateGray','Snow','SpringGreen','SteelBlue','Tan','Teal','Thistle','Tomato','Turquoise','Violet','Wheat','White','WhiteSmoke','Yellow','YellowGreen'];
+  function $(x) { return document.querySelector(x);}
   var levels = {
     'easy': [40, 20], 
     'normal': [80, 15], 
@@ -42,11 +13,9 @@
   var currentcol = 'white';
   var correct = 0;
   var currentlevel = false;
-
   function setlevel(button) {
     currentlevel = button;
   }
-
   function drawbuttons(container) {
     var out = '';
     for (level in levels) {
@@ -55,7 +24,6 @@
     }
     container.innerHTML = out;
   }
-
   $('#levelbuttons').addEventListener('click', function(ev) {
     ev.preventDefault();
     var target = ev.target;
@@ -68,19 +36,16 @@
       document.body.classList.remove('loaded');
     }
   });
-
   function init(correct, swabnumber, moves) {
     drawbuttons($('#levelbuttons'));
     drawswabs(swabnumber, cols);
     updatecounter(correct, moves);
   }
-
   function updatecounter(correct, allmoves) {
     $('#counter').innerHTML = '<span class="correct">' + correct +
                               '</span>/<span class="wrong">' +
                                allmoves+'</span>';
   }
-
   $('ul.swabs').addEventListener('click', function(ev) {
     ev.preventDefault();
     var target = ev.target;
@@ -89,7 +54,6 @@
         validatecol(col);
     }
   });
-
   function validatecol(col) {
     if (col === currentcol) {
       ++correct;
@@ -107,7 +71,6 @@
       }  
     }
   } 
-
   function gameover(correct) {
     $('.scores').innerHTML = 'You recognised ' + correct + ' colours on the ' + 
                               currentlevel.innerHTML + ' level.';
@@ -120,7 +83,6 @@
       '">' + 'Share on Twitter</a>';                          
     document.body.classList.add('ended');
   }
-
   function drawswabs(swabnumber, cols) {
     var list = $('ul.swabs');
     var out ='';
@@ -142,16 +104,16 @@
     list.innerHTML = out;
   }
   function shuffle(array) {
-    var newarray = array.slice(0);
-    var currentIndex = newarray.length, temporaryValue, randomIndex ;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = newarray[currentIndex];
-      newarray[currentIndex] = newarray[randomIndex];
-      newarray[randomIndex] = temporaryValue;
+    var na = array.slice(0);
+    var ci = na.length, tv, ri;
+    while (0 !== ci) {
+      ri = Math.floor(Math.random() * ci);
+      ci -= 1;
+      tv = na[ci];
+      na[ci] = na[ri];
+      na[ri] = tv;
     }
-    return newarray;
+    return na;
   }
   $('.gameover button').addEventListener('click', function(ev) {
       document.body.classList.remove('ended');
