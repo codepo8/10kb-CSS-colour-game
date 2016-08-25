@@ -99,10 +99,20 @@ ul#levelbuttons {
   color: lime;
 }  
 #result {
-  display: block;
-  color: #ccc;
-  margin-top: 5px;
+  font-size: 20px;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(0, 0, 0, .8);
+  padding: .2em .5em;
+  width: calc(100% - 1em);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 400ms;
 }
+.fault #result {
+  opacity: 1;
+}
+
 small {
   display: block;
   clear: both;

@@ -51,10 +51,10 @@
     var target = ev.target;
     if (target.tagName === 'A') {
       var col = target.getAttribute('data-title');
-        validatecol(col);
+        validatecol(col, target.offsetTop);
     }
   });
-  function validatecol(col) {
+  function validatecol(col, y) {
     if (col === currentcol) {
       ++correct;
       updatecounter(correct, moves);
@@ -68,6 +68,9 @@
         updatecounter(correct, moves);
         $('#result').innerHTML = 'nope… <b style="color: ' + col +
                                  '">(' + col + ')</b>';
+        result.style.top = y + 40 + 'px';
+        document.body.classList.add('fault');
+        window.setTimeout(function(){document.body.classList.remove('fault');}, 1000);
       }  
     }
   } 

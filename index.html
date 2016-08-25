@@ -36,8 +36,8 @@
     <p class="riddle">
       Click the colour <span id="colourname"></span>.
       <span id="counter"></span>
-      <span id="result"></span>
     </p>
+    <div id="result"></div>
     <ul class="swabs"></ul>
     <header class="gameover">
       <h1>Game Over!</h1>
@@ -46,7 +46,7 @@
       <button>Try again!</button>
     </header>
   </section>
-<script src="csscolournames.min.js"></script>
+<script src="csscolournames.js"></script>
 <script>
 if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/10kb-CSS-colour-game/sw.js', { scope: '/10kb-CSS-colour-game/' })
