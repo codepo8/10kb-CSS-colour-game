@@ -1,11 +1,11 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('csscolourgame-v9').then(cache => {
+    caches.open('csscolourgame-v10').then(cache => {
       return cache.addAll([
         '/10kb-CSS-colour-game/',
         '/10kb-CSS-colour-game/index.html',
         '/10kb-CSS-colour-game/logo.png',
-        '/10kb-CSS-colour-game/csscolournames.min.js',
+        '/10kb-CSS-colour-game/csscolournames.js',
         '/10kb-CSS-colour-game/icons/128x128.png',
         '/10kb-CSS-colour-game/icons/256x256.png',
         '/10kb-CSS-colour-game/icons/512x512.png',
@@ -20,7 +20,7 @@ self.addEventListener('install', e => {
  
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['csscolourgame-v9'];
+  var cacheWhitelist = ['csscolourgame-v10'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
